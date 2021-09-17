@@ -1495,7 +1495,8 @@
                 "nf",
                 "nfk",
                 "b",
-                "bk",
+                "bk1",
+				"bk2",
                 "c",
                 "d",
                 "oa",
@@ -1536,7 +1537,8 @@
                     "Qualität normal/fehlerhaft",
                     "Qualität normal/fehlerhaft/krank",
                     "Qualität B",
-                    "Qualität B Rotkern",
+                    "Qualität B-Rot1 (Rotkern >33% und <60% des Durchmessers)",
+                    "Qualität B-Rot2 (Rotkern ≥60% des Durchmessers)",
                     "Qualität C",
                     "Qualität D",
                     "Ohne Qualitätsausscheidung",
@@ -1565,7 +1567,7 @@
                     "Braunkern",
                     "Spritzkern",
                     "Qualität A",
-                    "Qualität A Rotkern"
+                    "Qualität A Rotkern (Rotkern >15% des Durchmessers)"
                 ]
             },
             "type": "string"
