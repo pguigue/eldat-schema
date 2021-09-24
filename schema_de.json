@@ -2089,34 +2089,7 @@
             "maximum": 20
         },
         "diameter": {
-            "type": "object",
-            "properties": {
-                "diameter_value": {
-                    "$ref": "#/definitions/diameter_value",
-                    "title": "Durchmesserwert ohne Rinde",
-                    "description": "Durchmesser des Einzelstammes oder mittleren Stammes in der Aggregation (cm)"
-                },
-                "dia_measurement": {
-                    "$ref": "#/definitions/dia_measurement",
-                    "title": "Durchmesserermittlung",
-                    "description": "Angabe wie der Stammdurchmesser ermittelt wurde"
-                },
-                "bark_condition": {
-                    "$ref": "#/definitions/bark_condition",
-                    "title": "Rindenzustand",
-                    "description": "Angabe über den Zustand der Rinde bei der Messung"
-                },
-                "bark_thickness": {
-                    "$ref": "#/definitions/bark_thickness",
-                    "title": "Rindenstärke",
-                    "description": "Rindendicke bei Stammvermessung (cm)"
-                },
-                "dia_on_bark": {
-                    "$ref": "#/definitions/dia_on_bark",
-                    "title": "Durchmesser mit Rinde",
-                    "description": "Stammdurchmesser, gemessen in Rinde"
-                }
-            }
+			"$ref": "#/definitions/diameter_length"
         },
         "diameter_value": {
             "type": "number",
