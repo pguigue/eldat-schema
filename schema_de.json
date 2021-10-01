@@ -4369,17 +4369,17 @@
                 "calibration_id": {
                     "$ref": "#/definitions/string30",
                     "title": "Eich-ID",
-                    "description": "ID zur Überprüfung der Eichung"
+                    "description": "Eindeutige und offizielle Nummer der Eichung"
                 },
                 "calibrated_until": {
                     "$ref": "#/definitions/date_time",
                     "title": "Eichung gültig bis",
-                    "description": "Datum bis zu dem das Gerät geeicht ist"
+                    "description": "Verfallsdatum der Eich-Id"
                 },
                 "calibrated_values": {
                     "type": "array",
                     "title": "Geeichte Messergebnisse",
-                    "description": "Liste der Messergebnisse, die durch das geeichte Verfahren erhoben wurden.",
+                    "description": "Liste aller Felder die Messergebnisse beinhalten und eichfähig sind.",
                     "items":{
                         "title": "Geeichte Messung",
                         "properties": {
