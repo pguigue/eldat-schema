@@ -4008,6 +4008,11 @@
                     "$ref": "#/definitions/currency",
                     "title": "Währung",
                     "description": "Angabe über die Währung in der die Transportkosten errechnet werden"
+                },
+                "trans_price_text": {
+                    "$ref": "#/definitions/trans_price_text",
+                    "title": "Bemerkungen",
+                    "description": "Freie Texteingabe für sonstige Bemessungsgrundlage"
                 }
             }
         },
@@ -4073,6 +4078,10 @@
                 ]
             },
             "type": "string"
+        },
+        "trans_price_text": {
+            "type": "string",
+            "maxLength": 255
         },
         "delivery_no_range": {
             "type": "array",
