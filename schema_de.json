@@ -3641,7 +3641,8 @@
                         "description": ""
                     },
                     "business_transaction":{
-                        "$ref": "#/definitions/business_transaction"
+                        "$ref": "#/definitions/business_transaction",
+                        "title": "Geschäftsvorfall"
                     },
                     "other_file": {
                         "$ref": "#/definitions/other_file",
@@ -4342,7 +4343,8 @@
                         "description": ""
                     },
                     "business_transaction":{
-                        "$ref": "#/definitions/business_transaction"
+                        "$ref": "#/definitions/business_transaction",
+                        "title": "Geschäftsvorfall"
                     },
                     "forest_measured": {
                         "$ref": "#/definitions/forest_measured",
