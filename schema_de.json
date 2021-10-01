@@ -2676,6 +2676,10 @@
                     "title": "Stelle",
                     "description": ""
                 },
+                "route_definition": {
+                    "$ref": "#/definitions/route_definition",
+                    "title": "Anfahrtsweg"
+                },
                 "other_contact": {
                     "$ref": "#/definitions/other_contact",
                     "title": "Weiterer Kontakt",
@@ -2974,6 +2978,10 @@
                     "$ref": "#/definitions/location",
                     "title": "Stelle",
                     "description": ""
+                },
+                "route_definition": {
+                    "$ref": "#/definitions/route_definition",
+                    "title": "Abfahrtsweg"
                 },
                 "other_contact": {
                     "$ref": "#/definitions/other_contact",
