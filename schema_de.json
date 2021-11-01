@@ -46,15 +46,18 @@
                     }
                 },
                 "transaction_id": {
-                    "description": "Eindeutige Kennung der Übermittlung",
+                    "title": "Kennung der Übermittlung",
+                    "description": "Eindeutige Id, die für jede Übertragung vom Versender neu erstellt wird.",
                     "$ref": "#/definitions/string36"
                 },
                 "process_id": {
-                    "description": "Eindeutige Kennung des Prozesses",
+                    "title": "Kennung des Prozesses",
+                    "description": "Eindeutige Id, die mit dem ersten .eldat-Dokumentes erstellt wird, dass den Prozess anstößt (meist in der Holzbereitstellungsmeldung). Weitere .eldat-Dokumente, die während der Holzbereitstellungskette erstellt werden, enthalten ebenfalls diese Id.",
                     "$ref": "#/definitions/string36"
                 },
                 "module_id": {
-                    "description": "Eindeutige Kennung des übermittelten Moduls",
+                    "title": "Kennung des übermittelten Moduls",
+                    "description": "Eindeutige Id, die das Modul eindeutig identifizierbar macht.",
                     "$ref": "#/definitions/string36"
                 },
                 "status_tech": {
@@ -63,6 +66,7 @@
                         "code": {
                             "type": "number",
                             "title": "Technischer Status",
+                            "description": "Eine 3 stellige Nummer, die den Status “Erstellt” oder “Bearbeitet” enthalten kann.",
                             "default": 100,
                             "enum": [
                                 100,
@@ -76,7 +80,8 @@
                             }
                         },
                         "reference_module_id": {
-                            "description": "Eindeutige Kennung des Moduls, auf das sich bezogen wird.",
+                            "title": "Kennung des Moduls",
+                            "description": "Eindeutige Referenz auf ein, bezugnehmendes Dokument. Hier wird die module_id eines existierenden Dokumentes eingetragen.",
                             "$ref": "#/definitions/string36"
                         }
                     },
@@ -85,15 +90,17 @@
                     ]
                 },
                 "response_system": {
-                    "description": "Eine Adresse auf die, mit einem .eldat Dokument, geantwortet werden kann. (Meist die url einer API des Senders dieses Dokumentes.)",
+                    "description": "Informationen zum System auf das, mit einem .eldat Dokument, geantwortet werden kann. (Meist die url einer API des Senders dieses Dokumentes.)",
                     "type": "object",
                     "properties": {
                         "uri": {
-                            "description": "Host, Pfad und Port der Adresse (z.B. https://api.example.com:3000/eldat/receive)",
+                            "title": "Host, Pfad und Port der Adresse",
+                            "description": "Der Endpunkt des Systemes, an das eine mögliche Antwort gesendet werden soll (z.B. https://api.example.com:3000/eldat/receive ).",
                             "$ref": "#/definitions/string255"
                         },
                         "user_id": {
-                            "description": "Eindeutige Kennung des Nutzers. (Meist die systeminterne ID des Senders der Nachricht.)",
+                            "title": "Kennung des Nutzers",
+                            "description": "Eindeutige Id des Senders des Dokumentes (Authentifizierung / Meist die systeminterne ID des Senders der Nachricht). Diese Id soll bei Antworten auf ein Dokument als “request_system -> user_id” übermittelt werden.",
                             "$ref": "#/definitions/string36"
                         }
                     },
@@ -102,19 +109,29 @@
                     ]
                 },
                 "request_system": {
-                    "description": "Eindeutige Kennung des Nutzers des Empfängersystems. (Meist die systeminterne ID des Empfängers der Nachricht.)",
-                    "$ref": "#/definitions/string36"
+                    "description": "Informationen zum Empfängersystem.",
+                    "type": "object",
+                    "properties": {
+                        "user_id": {
+                            "title": "Kennung des Nutzers des Empfängersystems",
+                            "description": "Eindeutige Id des Empfängers (Authentifizierung / Meist die systeminterne ID des Empfängers der Nachricht). Die Id erhält ein System ausschließlich durch vorangegangene Dokumente. Dort wird sie als “response_system -> user_id” übermittelt.",
+                            "$ref": "#/definitions/string36"
+                        }
+                    }
                 },
                 "created_by": {
                     "type": "object",
                     "properties": {
                         "company": {
+                            "description": "Firmenname des Erstellers des Dokumentes / bzw. Hersteller der erstellenden Software.",
                             "$ref": "#/definitions/string255"
                         },
                         "application": {
+                            "description": "Name der Software, die das Dokument erstellt.",
                             "$ref": "#/definitions/string255"
                         },
                         "application_version": {
+                            "description": "Version der Software, die das Dokument erstellt.",
                             "$ref": "#/definitions/string255"
                         }
                     }
