@@ -1085,14 +1085,12 @@
             "title": "Preiseinheit",
             "enum": [
                 "bei",
-                "bet",
-                "pro"
+                "bet"
             ],
             "options": {
                 "enum_titles": [
                     "Betrag je Einheit",
-                    "Absolutbetrag",
-                    "Prozent"
+                    "Absolutbetrag"
                 ]
             },
             "type": "string"
