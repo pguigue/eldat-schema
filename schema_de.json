@@ -3367,7 +3367,8 @@
                     "quality",
                     "grade",
                     "use",
-                    "amount"
+                    "amount",
+                    "coordinate"
                 ]
             }
         },
